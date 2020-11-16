@@ -1,38 +1,149 @@
-.App {
-  text-align: center;
+.list-icon ul li {
+    background-color: transparent;
+    padding: 5px;
 }
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.list-icon ul li:hover {
+    background-color:rgb(114, 214, 131);
+    color: white;
+    
 }
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
+.item-card{
+    position: relative;
+}
+.item-status{
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+.new{
+    color: white;
+    padding: 3px;
+    background-color: rgb(91, 148, 96);
+}
+.hot{
+    color: blanchedalmond;
+    padding: 3px;
+    background-color: goldenrod;
+}
+.sliderBottom-img img{
+    height: 200px;
+}
+@media(max-width:'600px'){
+    .sliderBottom-img img{
+        height: 100px;
+    }
+}
+.client-container{
+    background: url('./Grocary/Banner/Banner2.webp');
+    height: 85vh;
+    background-attachment: fixed;
+}
+.footer{
+    background:linear-gradient(rgba(19, 15, 15, 0.5), rgba(17, 14, 14, 0.5)), url('./Grocary/Banner//Banner2.webp');
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.inc {
+    display: inline-block;
+    width: 40px;
+    height: 40px;
+    line-height: 40px;
+    text-align: center;
+    border: 1.1px solid orangered;
+    color: orangered;
+    border-radius: 50%;
+    cursor: pointer;
+    font-weight: normal;
   }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
-
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+  .productQuantity {
+    display: inline-block;
+    padding: 0 10px;
+    font-size: 20px;
+    width: 50px;
+    text-align: center;
   }
-  to {
-    transform: rotate(360deg);
+  .dec {
+    display: inline-block;
+    width: 40px;
+    height: 40px;
+    line-height: 40px;
+    text-align: center;
+    border: 1.1px solid orangered;
+    color: orangered;
+    border-radius: 50%;
+    cursor: pointer;
+    font-weight: normal;
   }
-}
+  .cart {
+    display: flex;
+    align-items: center;
+    background: #fff;
+    padding: 15px 20px;
+  }
+  .cartProImage {
+    display: inline-block;
+    width: 80px;
+    height: 80px;
+  }
+  .cartProImage img {
+    width: 100%;
+    height: 100%;
+  }
+  .cartProductName {
+    width: 250px;
+    padding: 0 15px;
+    font-size: 14px;
+  }
+  .cartProductPrice {
+    width: 120px;
+    padding: 0 15px;
+    font-weight: bold;
+  }
+  .inc {
+    display: inline-block;
+    width: 40px;
+    height: 40px;
+    line-height: 40px;
+    text-align: center;
+    border: 1.1px solid orangered;
+    color: orangered;
+    border-radius: 50%;
+    cursor: pointer;
+    font-weight: normal;
+  }
+  .productQuantity {
+    display: inline-block;
+    padding: 0 15px;
+    font-size: 16px;
+    width: 70px;
+    text-align: center;
+  }
+  .dec {
+    display: inline-block;
+    width: 40px;
+    height: 40px;
+    line-height: 40px;
+    text-align: center;
+    border: 1.1px solid rgb(228, 98, 98);
+    color: rgb(228, 98, 98);
+    border-radius: 50%;
+    cursor: pointer;
+    font-weight: normal;
+  }
+  .productTotalPrice {
+    display: inline-block;
+    width: 150px;
+    padding: 0 15px;
+    font-weight: bold;
+    color: #f57224;
+    text-align: center;
+  }
+  .deleteCartPro {
+    border:none;
+    display: inline-block;
+    padding: 0 15px;
+    color: rgb(247, 117, 117);
+    background: transparent;
+    font-size: 20px;
+    cursor: pointer;
+  }

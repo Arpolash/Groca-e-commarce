@@ -1,24 +1,39 @@
-import logo from './logo.svg';
-import './App.css';
+import React, { createContext, useState } from 'react';
+import Navbar from './Components/Navbar/Navbar';
+import  './App.css';
+import { BrowserRouter as Router,Route,Switch } from 'react-router-dom';
+import Main from './Components/Main/Main';
+import MenuItemDetails from './Components/Main/MenuItemDetails/MenuItemDetails';
+import { Provider } from 'react-redux';
+import store from './Components/Redux/StoreIndex';
+import Cart from './Components/Main/Cart/Cart';
 
+export const MenuContext = createContext();
 function App() {
+  const [menu,setMenu] = useState('mix')
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+<Router>
+  <Switch>
+    <Provider store={store}>
+  <MenuContext.Provider value={[menu,setMenu]} className="app">
+  <Navbar></Navbar>
+    <Route exact path="/">
+    <Main></Main>
+    </Route>
+ <Route exact path="/cart">
+   <Cart></Cart>
+ </Route>
+ <Route path="/item/:itemKey">
+      <MenuItemDetails></MenuItemDetails>
+    </Route>
+   
+    </MenuContext.Provider>
+    </Provider>
+  </Switch>
+</Router>
+   
+  
+
   );
 }
 
